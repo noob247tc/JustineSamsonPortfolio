@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+  .background-animation{
+    position: fixed;
+    z-index:-100;
+    top: 75px;
+  
+    
+  }
+  .background-animation .bubble{
+    margin:15px 0;
+  }
+  .bubble:nth-of-type(odd){
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #01E0F950;
+    box-shadow: 0 0 10px 10px #01E0F950,
+    0 0 50px #01E0F9,
+    0 0 100px #01E0F9;
+    animation:bubbles linear infinite;
+    animation-duration:calc(350s/ var(--a));
+  }
+  .bubble:nth-of-type(even){
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FE454550;
+    box-shadow: 0 0 10px 10px #FE454550,
+    0 0 50px #FE4545,
+    0 0 100px #FE4545;
+    animation: bubbles linear infinite;
+    animation-duration:calc(400s/ var(--a));
+  
+  }
+  @keyframes bubbles{
+    100%{
+      transform: translateX(100vw);
+    }
+    0%{
+      transfform: translateX(-10vw);
+    }
+  }
+
+#desktop-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+
+
+}
+.logo img{
+    width: 250px;
+    height: auto;
+}
+.desktop-links{
+    display: flex;
+    justify-content: space-around;
+    gap: 5vw;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.desktop-links a{
+    text-decoration: none;
+    color: inherit;
+}
+a {
+    display: inline-block;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.desktop-links a:hover {
+  color: #0D7CFF;
+ text-shadow: 0 0 30px #0D7CFF, 0 0 40px #0D7CFF, 0 0 50px #0D7CFF, 0 0 60px #0D7CFF;
+  transform: scale(1.15);
+  letter-spacing: 2px;
+}
+
+.icon{
+  display: none;
+}
+.hide{
+  display: none;
+}
+.section-introduction{
+    display:flex;
+    justify-content: center;
+    gap: 5vw;
+    align-items: center;
+    height: 83vh;
+}
+
+.profile-picture img{
+    width: 275px;
+    height: auto;
+    border-radius: 275px;
+
+
+}
+.introduction{
+    text-align: center;
+
+    width: 433px;;
+    height: 163px;
+  
+  
+}
+
+.resume{
+  display: none;
+  opacity : 1;
+  transform : translateY(20px);
+  transition : all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+.introduction p {
+  border-right: solid 3px rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: monospace;  
+  font-size: 2.2rem;
+  color: black;
+  margin: 0 auto;
+
+       
+
+}
+.introduction .p1{
+  width: 300px;
+   animation: 
+            typing 2s steps(17,end) forwards,
+            cursor .2s steps(17,end) infinite alternate;
+}
+@keyframes cursor{
+  50% {border-color: transparent ;}
+}
+@keyframes typing{
+    from {width: 0;}
+}
+.introduction .p2{
+  display: none;
+  width: 500px;
+   animation: 
+            typing2 3s steps(29,end) ,
+            cursor2 .1s step-end infinite alternate;
+}
+@keyframes cursor2{
+  50% {border-color: transparent ;}
+}
+@keyframes typing2{
+    from{width: 0;}
+}
+
+/*
+ from {width: 0;
+      border-right:none;}
+    to {width:100%;}
+    */
+/*
+.introduction > .p1 {
+  animation: animated-text 2s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 225px;}
+}
+
+
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+.introduction > .p2 {
+  animation: animated-text2 2s steps(29,end) 3s 1 normal both,
+             animated-cursor2 600ms steps(29,end) infinite;
+}
+
+
+
+@keyframes animated-text2{
+  from{width: 0;}
+  to{width: 440px;}
+}
+
+
+
+@keyframes animated-cursor2{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+*/
+
+.button {
+  background-color: #e1ecf4;
+  border-radius: 20px;
+  border: 1px solid #7aa7c7;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.15385;
+  padding: 8px .8em;
+}
+
+.button:hover
+ {
+  background-color: #b3d3ea;
+  text-shadow: 0 0 30px #2c5777, 0 0 40px #2c5777, 0 0 50px #2c5777, 0 0 60px #2c5777;
+}
+.section-about{
+    display:flex;
+    justify-content: center;
+    gap: 10vw;
+    align-items: center;
+    height: 100vh;
+    font-family:monospace;
+    font-size: 1.05rem;
+}
+.about-me p{
+  width: 300px;
+  text-indent: 40px;
+  text-align: justify;
+}
+  .profile-picture2 img{
+       width: 275px;
+    height: 344px;
+    border-radius: 275px;
+  }
+.section-about p {
+   font-family: monospace;
+    font-size: 1.05rem;
+}
+.section-about h1{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+  .section-introduction, .section-about{
+     display: flex;
+    justify-content: center;
+    gap: 10vw;
+    align-items: center;
+  }
+
+section {
+    height: 100vh;
+    opacity: 0; /* Start hidden */
+    transform: translateX(-100px); /* Start off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for smooth effect */
+}
+section.visible {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Slide in */
+}
+#projects{
+  position: relative;
+  padding: 50px;
+  font-family: monospace;
+  
+}
+#projects h1{
+  font-size: 50px;
+
+}
+.my-works{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 25px;
+  
+}
+.images{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 50px;
+  align-items: center;
+  border: 2px solid black;
+  width: 300px;
+  height: 450px;
+  text-align: center;
+  gap: 10px;
+  animation: bgAnimation 10s infinite alternate;
+}
+.images:hover{
+  background-color: #b3d3ea;
+}
+
+.my-works img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+   border: 5px solid #7aa7c7;
+  border-radius: 55px;
+  
+}
+.github-links{
+  position: relative;
+  bottom: -35px;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.github-links2{
+  position: relative;
+  bottom: -50px;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.github-links3{
+  position: relative;
+  bottom: -5px;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.my-works button:hover{
+
+  background-color: #b3d3ea;
+  text-shadow: 0 0 30px #2c5777, 0 0 40px #2c5777, 0 0 50px #2c5777, 0 0 60px #2c5777;
+  transform: scale(1.05);
+
+}
+
+.fa-circle-arrow-up{
+  display: flex;
+  position: fixed;
+  bottom:50px;
+  right:50px;
+  font-size: 2.5rem;
+  cursor: pointer;
+
+}
+.arrow a{
+  color: inherit;
+}
+.arrow a:hover{
+  color: blue;
+}

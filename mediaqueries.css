@@ -1,0 +1,103 @@
+@media screen and (max-width: 400px) {
+    .logo img{
+    width: 175px;
+    height: auto;
+    }
+  
+    .icon {
+        display: flex;
+        position: relative;
+        left: 10px;
+        top: -10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .desktop-links{
+        display: none;
+    }
+   
+  
+
+    .phone-links{
+        display: flex;
+        flex-direction: column;
+      position: absolute;
+        top: 70px;
+        right: 20px;
+      width:100px;
+      height:150px;
+      justify-content: space-around;
+      z-index: 1;
+
+    } 
+    .hide{
+  display:none ;
+    }
+    .phone-links li{
+        list-style: none;
+
+    }
+    .phone-links a{
+        color: inherit;
+        gap:100px;
+
+    }
+    a {
+    display: inline-block;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.5s;
+}
+.phone-links a:hover {
+  color: #0D7CFF;
+ text-shadow: 0 0 30px #0D7CFF, 0 0 40px #0D7CFF, 0 0 50px #0D7CFF, 0 0 60px #0D7CFF;
+  transform: scale(1.15);
+  letter-spacing: 2px;
+}
+
+    .section-introduction{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-picture img{
+    width: 200px;
+    height: auto;
+    }
+    .introduction p{
+        font-size: 1.2rem;
+    }
+    .introduction .p1{
+  width: 175px;
+   animation: 
+            typing 2s steps(17,end) forwards,
+            cursor .2s steps(17,end) infinite alternate;
+}
+@keyframes cursor{
+  50% {border-color: transparent ;}
+}
+@keyframes typing{
+    from {width: 0;}
+}
+.introduction .p2{
+  display: none;
+  width: 290px;
+   animation: 
+            typing2 3s steps(29,end) ,
+            cursor2 .1s step-end infinite alternate;
+}
+@keyframes cursor2{
+50% {border-color:transparent ;}
+}
+@keyframes typing2{
+    from{width: 0;}
+}
+#about{
+    display:flex;
+    flex-direction: column-reverse;
+}
+.my-works{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+}   
