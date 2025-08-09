@@ -56,15 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 surveyLink.addEventListener("click", ()=>{
-     window.open("https://noob247tc.github.io/Survey1/Survery.html", "_blank");
+     window.open("https://noob247tc.github.io/Survey1/", "_blank");
 });
 
 landingPage.addEventListener("click", ()=>{
-     window.open("https://noob247tc.github.io/landing-page/Product%20Landing%20Page.html", "_blank");
+     window.open("https://noob247tc.github.io/landing-page/", "_blank");
 });
 
 palindromeChecker.addEventListener("click", ()=>{
-     window.open("https://noob247tc.github.io/PalindromeChecker/Palindrome%20Checker.html", "_blank");
+     window.open("https://noob247tc.github.io/PalindromeChecker/", "_blank");
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -92,4 +92,5 @@ document.addEventListener('DOMContentLoaded', function() {
         closeButton.style.display = 'none'; 
     });
 });
+
 
