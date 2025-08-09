@@ -20,7 +20,7 @@ p1.addEventListener('animationend', ()=> {
 p2.addEventListener('animationend', ()=>{
   resume.style.display = 'block';
    setTimeout(() => {
-    resume.style.transform = 'translateY(0)'; // Move to final position
+    resume.style.transform = 'translateY(0)'; 
   }, 10);
 })
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,20 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5 // 50% visibility to consider a section active
+        threshold: 0.5 
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.intersectionRatio >= 0.5) {
-                // A new section is at least 50% visible
+               
                 if (activeSection && activeSection !== entry.target) {
                     activeSection.classList.remove('visible');
                 }
                 entry.target.classList.add('visible');
                 activeSection = entry.target;
             } else {
-                // If this section is not the active one or less than 50% visible, remove visible class
+             
                 if (activeSection !== entry.target) {
                     entry.target.classList.remove('visible');
                 }
@@ -82,13 +82,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     toggleButton.addEventListener('click', function() {
         phoneLinks.classList.remove('hide');
-        toggleButton.style.display = 'none'; // Hide the bars icon
-        closeButton.style.display = 'flex'; // Show the close icon
+        toggleButton.style.display = 'none'; 
+        closeButton.style.display = 'flex';
     });
 
     closeButton.addEventListener('click', function() {
         phoneLinks.classList.add('hide');
-        toggleButton.style.display = 'flex'; // Show the bars icon
-        closeButton.style.display = 'none'; // Hide the close icon
+        toggleButton.style.display = 'flex'; 
+        closeButton.style.display = 'none'; 
     });
 });
+
